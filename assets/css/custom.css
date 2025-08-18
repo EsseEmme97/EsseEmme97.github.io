@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+
+body {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  /* font-size: 20px; */
+}
+
+li{
+	list-style-type: none;
+}
+
+.bg-custom-dark {
+  background-color: var(--bs-gray-900);
+  color: var(--bs-white);
+}
+
+/* .hero-section h1{
+	font-size: 84px;
+	font-weight: bold;
+}
+
+.hero-section span{
+	font-size: 32px;
+	font-weight: bold;
+} */
+
+/* .fs-32{
+	font-size: 32px;
+} */
+
+.mt-200{
+	margin-top: 200px;
+}
+
+.vh-75{
+	height: 75vh;
+}
+
+.card{
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
