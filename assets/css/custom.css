@@ -87,6 +87,10 @@ li{
   animation: typewriter 0.05s forwards;
 }
 
+.scrollable > * {
+	opacity: 0;
+}
+
 @keyframes typewriter {
   from { opacity: 0 }
   to   { opacity: 1 }
