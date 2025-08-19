@@ -1,10 +1,34 @@
-// import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+class TypeWriterEffect {
+  constructor(element, speed = 100, wordBreakIndex = null) {
+    this.element = element;
+    this.speed = speed;
+	this.wordBreakIndex= wordBreakIndex;
+  }
 
-// const canvas = document.querySelector(".canvas");
+  splitText() {
+    const text = this.element.textContent;
+    this.element.textContent = "";
+    text.trim().split("").forEach((char, index) => {
+	  // If a word break index is provided, insert a line break at that index		
+	  if (this.wordBreakIndex !== null && index === this.wordBreakIndex && window.innerWidth > 768) {
+		const br = document.createElement("br");
+		this.element.appendChild(br);
+		return;
+	  }
+      if (char === " ") {
+        this.element.appendChild(document.createTextNode(" "));
+        return;
+      }
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.animationDelay = (index * this.speed) / 1000 + "s";
+      this.element.appendChild(span);
+    });
+  }
+}
 
-// const dotLottie = new DotLottie({
-//   canvas,
-//   src: "cac553d0-f289-4332-8148-2e2992859d85.json",
-//   loop: true,
-//   autoplay: true
-// });
+const typeWriterEffect = new TypeWriterEffect(
+  document.querySelector(".typewriter"),
+  80,9
+);
+typeWriterEffect.splitText();
