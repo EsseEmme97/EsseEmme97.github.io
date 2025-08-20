@@ -1,3 +1,5 @@
+AOS.init({once:true,duration:1000});
+
 class TypeWriterEffect {
   constructor(element, speed = 100, wordBreakIndex = null) {
     this.element = element;
@@ -41,20 +43,5 @@ const typeWriterEffect = new TypeWriterEffect(
 );
 typeWriterEffect.splitText();
 
-const container = document.querySelector(".scrollable");
 
-const observer = new IntersectionObserver(([entry]) => {
-  if (!entry.isIntersecting) return;
-
-  Array.from(container.children).forEach((child, i) => {
-    child.style.animationDelay = `${i * 0.17}s`;
-    child.classList.add("animate__animated", "animate__fadeIn");
-  });
-  observer.unobserve(container);
-}, {
-  threshold: 0.6,
-  rootMargin: "0px 0px -10% 0px"
-});
-
-observer.observe(container);
 

@@ -96,6 +96,27 @@ li{
   to   { opacity: 1 }
 }
 
+[data-aos="bullet-anim"]::before {
+  opacity: 0;
+  transform: scale(0);
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+}
+
+[data-aos="bullet-anim"]{
+	width: 0;
+	transition: width 0.5s ease;
+}
+
+[data-aos="bullet-anim"].aos-animate {
+  width: 100%;
+}
+
+[data-aos="bullet-anim"].aos-animate::before {
+  opacity: 1;
+  transform: scale(1), translateY(-50%);
+}
+
 @media (max-width:768px){
 
 	.timeline::after{

@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/custom.css" />
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
@@ -191,9 +192,9 @@
           <h2>I miei studi</h2>
         </div>
         <div
-          class="mt-5 row justify-content-between gap-3 gap-lg-0 px-3 px-lg-0 scrollable"
+          class="mt-5 row justify-content-between gap-3 gap-lg-0 px-3 px-lg-0"
         >
-          <div class="card col-lg-2 col-12 shadow p-2">
+          <div class="card col-lg-2 col-12 shadow p-2" data-aos="fade-up">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="84"
@@ -217,7 +218,7 @@
               </p>
             </div>
           </div>
-          <div class="card col-lg-2 col-12 shadow p-2">
+          <div class="card col-lg-2 col-12 shadow p-2" data-aos="fade-up" data-aos-delay="100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="84"
@@ -241,7 +242,7 @@
               </p>
             </div>
           </div>
-          <div class="card col-lg-2 col-12 shadow p-2">
+          <div class="card col-lg-2 col-12 shadow p-2" data-aos="fade-up" data-aos-delay="200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="84"
@@ -265,7 +266,7 @@
               </p>
             </div>
           </div>
-          <div class="card col-lg-2 col-12 shadow p-2">
+          <div class="card col-lg-2 col-12 shadow p-2" data-aos="fade-up" data-aos-delay="300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="84"
@@ -289,7 +290,7 @@
               </p>
             </div>
           </div>
-          <div class="card col-lg-2 col-12 shadow p-2">
+          <div class="card col-lg-2 col-12 shadow p-2" data-aos="fade-up" data-aos-delay="400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="84"
@@ -322,13 +323,13 @@
     <section id="Esperienze" class="bg-custom-dark mt-5">
       <div class="container">
         <div>
-          <span>&lt; About me &#47;&gt;</span>
-          <h2>Esperienze lavorative</h2>
+          <span data-aos="fade-left">&lt; About me &#47;&gt;</span>
+          <h2 data-aos="fade-right" data-aos-delay="200">Esperienze lavorative</h2>
         </div>
         <div class="row flex-col flex-md-row mt-5 justify-content-between">
           <div class="col-lg-3 col-12">
             <h4>Step 1</h4>
-            <span class="timeline"></span>
+            <span class="timeline" data-aos="bullet-anim"></span>
             <div>
               <span>Lavoro 1</span>
               <span>2016-2017</span>
@@ -340,7 +341,7 @@
           </div>
           <div class="col-lg-3 col-12">
             <h4>Step 2</h4>
-            <span class="timeline"></span>
+            <span class="timeline" data-aos="bullet-anim" data-aos-delay="200"></span>
             <div>
               <span>Lavoro 1</span>
               <span>2016-2017</span>
@@ -352,7 +353,7 @@
           </div>
           <div class="col-lg-3 col-12">
             <h4>Step 3</h4>
-            <span class="timeline"></span>
+            <span class="timeline" data-aos="bullet-anim" data-aos-delay="400"></span>
             <div>
               <span>Lavoro 1</span>
               <span>2016-2017</span>
@@ -364,7 +365,7 @@
           </div>
           <div class="col-lg-3 col-12">
             <h4>Step 4</h4>
-            <span class="timeline last"></span>
+            <span class="timeline last" data-aos="bullet-anim" data-aos-delay="600"></span>
             <div>
               <span>Lavoro 1</span>
               <span>2016-2017</span>
@@ -492,6 +493,7 @@
       </div>
     </footer>
     <!-- fine sezione contatti -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./assets/js/script.js"></script>
   </body>
