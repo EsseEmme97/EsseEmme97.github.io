@@ -87,9 +87,55 @@ li{
   animation: typewriter 0.05s forwards;
 }
 
-.scrollable > * {
-	opacity: 0;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6)); /* trasla metà delle slide */
+  }
 }
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 12); /* numero slide totali: 12 */
+  animation: scroll 40s linear infinite; /* durata animazione (es. 40s) */
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+
 
 @keyframes typewriter {
   from { opacity: 0 }
